@@ -92,7 +92,8 @@ def sgd(f,
 
         loss = None
         ### Seu Código Aqui (~2 lines)
-
+        loss, grad = f(x)
+        x = x - step * grad
         ### Seu código acaba aqui
 
         x = postprocessing(x)
