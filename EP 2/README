@@ -1,0 +1,33 @@
+O código está dividido em três arquivos:
+    - process_data.py: funções responsáveis pelo pré-processamento dos dados
+    - model.py: funções responsáveis pela criação e execução do modelo
+    - run.py: início do programa onde é chamado as funções de pré-processamento 
+      e execução de cada modelo
+
+Para a execução do modelo você deve executar o seguinte comando:
+
+    $ python run.py
+
+Esse comando irá fazer o pré-processamento dos dados e executar os modelos especificados:
+    - LSTM (50 épocas)
+    - LSTM (50 épocas, dropout=0.25)
+    - LSTM (50 épocas, dropout=0.50)
+
+    - LSTM bidirecional (50 épocas)
+    - LSTM bidirecional (50 épocas, dropout=0.25)
+    - LSTM bidirecional (50 épocas, dropout=0.50)
+
+    - LSTM (100 épocas)
+    - LSTM (100 épocas, dropout=0.25)
+    - LSTM (100 épocas, dropout=0.50)
+
+    - LSTM bidirecional (100 épocas)
+    - LSTM bidirecional (100 épocas, dropout=0.25)
+    - LSTM bidirecional (100 épocas, dropout=0.50)
+
+Para cada um dos modelos, será salvo um arquivo .hdf5 com os melhores pesos na 
+pasta ./results, assim como será salvo um gráfico da acurária e um gráfico da loss 
+na pasta ./images e um arquivo com o histórico de acurácia e loss na pasta ./history. 
+É esperado que essas pastas já existam antes da execução do comando acima.
+
+OBS.: Para a execução desse modelo foi utilizada a versão 2.3.1 do tensorflow
