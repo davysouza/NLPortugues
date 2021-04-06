@@ -138,3 +138,5 @@ dmypy.json
 data/B2W-Reviews01.csv
 
 **/history/*.json
+
+**/data/*
